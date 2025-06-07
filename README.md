@@ -32,3 +32,20 @@ image_pipeline/
 	•	threading
 	•	queue
 	•	Pillow for image processing
+
+# Concurrent Image Filter Pipeline
+
+This project loads images from disk using threads, processes them using a multiprocessing filter engine, and writes them out using threads again.
+
+It demonstrates:
+- Threaded I/O for non-blocking file operations
+- Multiprocessing for CPU-bound image filtering
+- Queue-based communication between threads/processes
+- Clean shutdown coordination
+
+## To Run:
+1. Place .jpg or .png files in the `images/` folder.
+2. Run `python run_pipeline.py`.
+3. Processed images appear in the `output/` folder.
+
+You can change the filter (e.g. grayscale, blur) in `run_pipeline.py`.
